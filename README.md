@@ -1,7 +1,7 @@
 # Blog App
 
 ## Screenshots
-![img](https://github.com/nemzyxt/blog-application/blob/main/screenshots/postslists.png?raw-true)
+![img](https://github.com/nemzyxt/blog-application/blob/main/screenshots/postslist.png?raw-true)
 
 ![img](https://github.com/nemzyxt/blog-application/blob/main/screenshots/post.png?raw-true)
 
