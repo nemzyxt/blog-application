@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <title>New Post</title>
+</head>
+<body>
+    <div class="container" style="margin-top: 80px;">
+        <div class="title">
+            <h2>Edit Post</h2>
+        </div>
+        <br />
+        <form action="/updatepost/" method="post" name="myform" enctype="multipart/form-data">
+            <input type="file" name="img" placeholder="Post Image" />
+            <br />
+            <br />
+            <input type="text" name="title" placeholder="Title" value="{{ post[3] }}" required />
+            <br />
+            <br />
+            <textarea id="content" name="content" placeholder="Content ..." required>{{ post[4] }}</textarea>
+            <br />
+            <br />
+            <button>Save Post</button>
+            <input type="text" name="post_id" value="{{ post[0] }}" hidden/>
+        </form>
+    </div>
+</body>
+</html>

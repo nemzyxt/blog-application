@@ -1,0 +1,18 @@
+CREATE DATABASE blog;
+
+CREATE TABLE posts (
+    post_id VARCHAR(10),
+    post_dt VARCHAR(15),
+    image_path VARCHAR(50),
+    title VARCHAR(50),
+    content VARCHAR(2000)
+);
+
+CREATE TABLE comments (
+    post_id VARCHAR(10),
+    dt VARCHAR(15),
+    name VARCHAR(15),
+    comment VARCHAR(250)
+);
+
+ALTER TABLE posts SET dt='14/07/2022', title='UPDATED', content='Hello friend, welcome to the underworld' WHERE post_id=148510;

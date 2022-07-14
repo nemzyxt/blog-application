@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <title>Post</title>
+</head>
+<body>
+    <div class="container" style="margin-top: 5px;">
+        <div class="title">
+            <h2 style="margin-bottom: 5px;">{{ post[3] }}</h2>
+            <p style="color: white; padding-bottom: 15px;">{{ post[1] }}</p>
+        </div>
+        <div class="ctrls">
+            <a class="ctrl-btn" href="/editpost/{{ post[0] }}">Edit Post</a>
+            <a class="ctrl-btn" href="/deletepost/{{ post[0] }}">Delete Post</a>
+        </div>
+        <br />
+        <img src="/static/images/{{ post[2] }}" />
+        <div>
+            <p id="p-content">
+                {{ post[4] }}
+            </p>
+        </div>
+        <div class="comments-list">
+            {% for comment in comments %}
+                <div class="comment-item">
+                    <p>{{ comment[2] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ comment[1] }}</p>
+                    <p style="text-align: left;">{{ comment[3] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+</body>
+</html>
