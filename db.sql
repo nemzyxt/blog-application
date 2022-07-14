@@ -14,5 +14,3 @@ CREATE TABLE comments (
     name VARCHAR(15),
     comment VARCHAR(250)
 );
-
-ALTER TABLE posts SET dt='14/07/2022', title='UPDATED', content='Hello friend, welcome to the underworld' WHERE post_id=148510;
